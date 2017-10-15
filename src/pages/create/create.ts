@@ -42,8 +42,11 @@ export class CreatePage {
     this.options.push("");
   }
 
-  deleteOption() {
-    this.options.pop();
+  deleteOption(option) {
+    var index = this.options.indexOf(option, 0);
+    if (index > -1) {
+      this.options.splice(index, 1)
+    }
   }
 
 

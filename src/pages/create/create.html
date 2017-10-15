@@ -24,7 +24,7 @@
     <ion-item *ngFor="let option of options">
       <ion-label stacked>Option</ion-label>
       <ion-input type="text">{{option}}</ion-input>
-      <button ion-button clear item-end icon-only color="dark" (click)="deleteOption(index)">
+      <button ion-button clear item-end icon-only color="dark" (click)="deleteOption(option)">
         <ion-icon name="close"></ion-icon>
       </button>
     </ion-item>
