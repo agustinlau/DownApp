@@ -41,6 +41,7 @@ export class HomePage {
     });
   }
 
+  // Navigates to the PollDetailsPage with the correct information
   navigateToPollDetailsPage(key: string) {
     this.navCtrl.push(PollDetailsPage, {
       name: this.polls[key].pollName,
