@@ -13,12 +13,12 @@
 
 <ion-content padding>
   <ion-list>
-    <button ion-item *ngFor="let key of pollKeys" [navPush]="pollDetailsPage">
+    <button ion-item *ngFor="let key of pollKeys" (click)="navigateToPollDetailsPage(key)">
       <ion-avatar item-start>
         <img src="../assets/icon/avatar-set.png">
       </ion-avatar>
-      <h1>{{polls[key].pollName}}</h1>
-      <p>{{polls[key].description}}</p>
+      <h1 id="pollName">{{polls[key].pollName}}</h1>
+      <p id="pollName">{{polls[key].description}}</p>
       <h2 item-end>8</h2>
       <ion-icon item-end small name="checkmark"></ion-icon>
       <h2 item-end>2</h2>

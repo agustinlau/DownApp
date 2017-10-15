@@ -40,6 +40,13 @@ export class HomePage {
     });
   }
 
+  navigateToPollDetailsPage(key: string) {
+    this.navCtrl.push(PollDetailsPage, {
+      name: this.polls[key].pollName,
+      desc: this.polls[key].description
+    });
+  }
+
 }
 
 
