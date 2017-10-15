@@ -1,0 +1,28 @@
+<!--The form to create a new poll-->
+
+<ion-header>
+  <ion-navbar>
+    <ion-title>Create Poll</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+
+    <ion-item>
+      <ion-label stacked>Poll Name</ion-label>
+      <ion-input type="text" [(ngModel)]="pollName"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>Description</ion-label>
+      <ion-input type="text" [(ngModel)]="description"></ion-input>
+    </ion-item>
+
+  </ion-list>
+
+  <button ion-button full (click)="createPoll(pollName, description)">
+    Next
+  </button>
+
+</ion-content>

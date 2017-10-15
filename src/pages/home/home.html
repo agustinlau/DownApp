@@ -1,0 +1,30 @@
+<!--Contains all the relevant polls-->
+
+<ion-header>
+  <ion-navbar>
+    <ion-title>Home</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only [navPush]="createPage">
+        <ion-icon name="add"></ion-icon>
+      </button>>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <button ion-item *ngFor="let key of pollKeys" [navPush]="pollDetailsPage">
+      <ion-avatar item-start>
+        <img src="../assets/icon/avatar-set.png">
+      </ion-avatar>
+      <h1>{{polls[key].pollName}}</h1>
+      <p>{{polls[key].description}}</p>
+      <h2 item-end>8</h2>
+      <ion-icon item-end small name="checkmark"></ion-icon>
+      <h2 item-end>2</h2>
+      <ion-icon item-end small name="close"></ion-icon>
+
+    </button>
+  </ion-list>
+
+</ion-content>
