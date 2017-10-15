@@ -1,29 +1,80 @@
 <ion-content padding>
-  <ion-list>
-
-    <div text-center>
-      <ion-icon name="ionic"></ion-icon>
-    </div>
-
+  <div text-center>
+    <ion-icon name="ionic"></ion-icon>
+  </div>
+  <div text-center>
     <ion-item>
-      <ion-label stacked>Email</ion-label>
-      <ion-input type="text" [(ngModel)]="email"></ion-input>
+      <ion-label item-left>Login</ion-label>
+      <ion-label item-right>Register</ion-label>
     </ion-item>
+  </div>
+  <ion-slides>
+    <ion-slide>
+      <ion-item>
+        <ion-label stacked>Email</ion-label>
+        <ion-input type="text" [(ngModel)]="email"></ion-input>
+      </ion-item>
 
-    <ion-item>
-      <ion-label stacked>Password</ion-label>
-      <ion-input type="password" [(ngModel)]="password"></ion-input>
-    </ion-item>
+      <ion-item>
+        <ion-label stacked>Password</ion-label>
+        <ion-input type="password" [(ngModel)]="password"></ion-input>
+      </ion-item>
 
 
-    <div text-center>
-      <button ion-button outline (click)="login()">Login</button>
-    </div>
-    <div text-center>
-      <button ion-button clear>Don't have an account? Sign up here</button>
-    </div>
+      <div text-center>
+        <button ion-button outline (click)="login()">Login</button>
+      </div>
+
+    </ion-slide>
+    <ion-slide>
+
+      <ion-item>
+        <ion-label stacked>Email</ion-label>
+        <ion-input type="text" [(ngModel)]="email"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label stacked>Password</ion-label>
+        <ion-input type="password" [(ngModel)]="password"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label stacked>Confirm Password</ion-label>
+        <ion-input type="password" [(ngModel)]="confirmPassword"></ion-input>
+      </ion-item>
+
+      <div text-center>
+        <button ion-button clear>Register</button>
+      </div>
+
+    </ion-slide>
+
+  </ion-slides>
+  <!--<ion-list>-->
+
+    <!--<div text-center>-->
+      <!--<ion-icon name="ionic"></ion-icon>-->
+    <!--</div>-->
+
+    <!--<ion-item>-->
+      <!--<ion-label stacked>Email</ion-label>-->
+      <!--<ion-input type="text" [(ngModel)]="email"></ion-input>-->
+    <!--</ion-item>-->
+
+    <!--<ion-item>-->
+      <!--<ion-label stacked>Password</ion-label>-->
+      <!--<ion-input type="password" [(ngModel)]="password"></ion-input>-->
+    <!--</ion-item>-->
 
 
-  </ion-list>
+    <!--<div text-center>-->
+      <!--<button ion-button outline (click)="login()">Login</button>-->
+    <!--</div>-->
+    <!--<div text-center>-->
+      <!--<button ion-button clear>Register</button>-->
+    <!--</div>-->
+
+
+  <!--</ion-list>-->
 </ion-content>
 
