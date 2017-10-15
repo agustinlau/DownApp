@@ -13,6 +13,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { CreatePage } from '../pages/create/create';
 import { PollDetailsPage } from "../pages/poll-details/poll-details";
+import { LoginPage } from "../pages/login/login";
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { PollDetailsPage } from "../pages/poll-details/poll-details";
     TabsPage,
     CreatePage,
     PollDetailsPage,
+    LoginPage,
   ],
   imports: [
     BrowserModule,
@@ -37,6 +39,7 @@ import { PollDetailsPage } from "../pages/poll-details/poll-details";
     TabsPage,
     CreatePage,
     PollDetailsPage,
+    LoginPage,
   ],
   providers: [
     StatusBar,

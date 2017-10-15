@@ -33,11 +33,11 @@ export class HomePage {
       this.pollKeys = Object.keys(newPost);
 
       // Iterates over each poll
-      pollSnapshot.forEach(child => {
-        console.log(child.key + ": " + child.val().pollName);
-        console.log(child.key + ": " + child.val().description);
-        return false;
-      });
+      // pollSnapshot.forEach(child => {
+      //   console.log(child.key + ": " + child.val().pollName);
+      //   console.log(child.key + ": " + child.val().description);
+      //   return false;
+      // });
     });
   }
 

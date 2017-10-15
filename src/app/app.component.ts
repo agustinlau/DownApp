@@ -7,11 +7,13 @@ import * as firebase from 'firebase';
 
 import { TabsPage } from '../pages/tabs/tabs';
 
+import { LoginPage } from "../pages/login/login"
+
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any = TabsPage;
+  rootPage:any = LoginPage;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {
