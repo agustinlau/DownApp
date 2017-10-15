@@ -45,7 +45,8 @@ export class HomePage {
   navigateToPollDetailsPage(key: string) {
     this.navCtrl.push(PollDetailsPage, {
       name: this.polls[key].pollName,
-      desc: this.polls[key].description
+      desc: this.polls[key].description,
+      options: this.polls[key].options
     });
   }
 

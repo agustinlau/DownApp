@@ -12,12 +12,13 @@ export class CreatePage {
   constructor(public navCtrl: NavController) {}
 
   // Updates the Firebase with the poll information
-  createPoll(pollName: string, description: string) {
+  createPoll(pollName: string, description: string, options: string[]) {
     var uuid = this.guid();
     const pollRef: firebase.database.Reference = firebase.database().ref('/poll/' + uuid);
     pollRef.update({
       id: uuid,
       pollName: pollName,
+      options: options,
       description: description
     })
   }
@@ -35,7 +36,7 @@ export class CreatePage {
 
   options = [
     "",
-    "",
+    // "",
   ];
 
   addOption() {
@@ -43,10 +44,15 @@ export class CreatePage {
   }
 
   deleteOption(option) {
-    var index = this.options.indexOf(option, 0);
+    var index = this.options.indexOf(option);
     if (index > -1) {
       this.options.splice(index, 1)
     }
+  }
+
+  // Disables constant reloading
+  customTrackBy(index: number, obj: any): any {
+    return index;
   }
 
 

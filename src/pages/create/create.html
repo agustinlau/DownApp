@@ -16,14 +16,19 @@
 
     <ion-item>
       <ion-label stacked>Poll Question</ion-label>
-      <ion-input type="text" [(ngModel)]="pollQuestion"></ion-input>
+      <ion-input type="text" placeholder="Wanna watch a movie?" [(ngModel)]="pollName"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>Poll Question</ion-label>
+      <ion-input type="text" placeholder="Snacks and popcorn included!" [(ngModel)]="description"></ion-input>
     </ion-item>
 
     <ion-item-divider color="light" clear>Vote Options</ion-item-divider>
 
-    <ion-item *ngFor="let option of options">
+    <ion-item *ngFor="let option of options; let i = index; trackBy: customTrackBy">
       <ion-label stacked>Option</ion-label>
-      <ion-input type="text">{{option}}</ion-input>
+      <ion-input type="text" [(ngModel)]="options[i]">{{option}}</ion-input>
       <button ion-button clear item-end icon-only color="dark" (click)="deleteOption(option)">
         <ion-icon name="close"></ion-icon>
       </button>
@@ -35,7 +40,7 @@
     Add Option
   </button>
 
-  <button ion-button full (click)="createPoll(pollName, description)">
+  <button ion-button full (click)="createPoll(pollName, description, options)">
     Next
   </button>
 
