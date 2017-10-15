@@ -3,6 +3,11 @@
 <ion-header>
   <ion-navbar>
     <ion-title>Create Poll</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only>
+        <ion-icon name="arrow-forward"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
 
@@ -10,16 +15,25 @@
   <ion-list>
 
     <ion-item>
-      <ion-label stacked>Poll Name</ion-label>
-      <ion-input type="text" [(ngModel)]="pollName"></ion-input>
+      <ion-label stacked>Poll Question</ion-label>
+      <ion-input type="text" [(ngModel)]="pollQuestion"></ion-input>
     </ion-item>
 
-    <ion-item>
-      <ion-label stacked>Description</ion-label>
-      <ion-input type="text" [(ngModel)]="description"></ion-input>
+    <ion-item-divider color="light" clear>Vote Options</ion-item-divider>
+
+    <ion-item *ngFor="let option of options">
+      <ion-label stacked>Option</ion-label>
+      <ion-input type="text">{{option}}</ion-input>
+      <button ion-button clear item-end icon-only color="dark" (click)="deleteOption(index)">
+        <ion-icon name="close"></ion-icon>
+      </button>
     </ion-item>
 
   </ion-list>
+
+  <button ion-button (click)="addOption()">
+    Add Option
+  </button>
 
   <button ion-button full (click)="createPoll(pollName, description)">
     Next

@@ -33,5 +33,18 @@ export class CreatePage {
       s4() + '-' + s4() + s4() + s4();
   }
 
+  options = [
+    "",
+    "",
+  ];
+
+  addOption() {
+    this.options.push("");
+  }
+
+  deleteOption() {
+    this.options.pop();
+  }
+
 
 }
