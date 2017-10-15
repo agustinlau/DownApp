@@ -36,6 +36,7 @@ export class HomePage {
       pollSnapshot.forEach(child => {
         console.log(child.key + ": " + child.val().pollName);
         console.log(child.key + ": " + child.val().description);
+        return false;
       });
     });
   }
