@@ -9,21 +9,23 @@
 <ion-content>
   <ion-card>
     <!--<img height="100" width="100" src="../assets/icon/avatar-set.png"/>-->
-    <p>
-      <ion-card-title>
-        {{pollName}}
-      </ion-card-title>
-      <p>
-        {{description}}
-      </p>
-      <p>
-        {{options}}
-      </p>>
-      <button ion-button icon-only>
-        <ion-icon name="checkmark"></ion-icon>
-      </button>
-      <button ion-button icon-only>
-        <ion-icon name="close"></ion-icon>
-      </button>
+
+    <ion-card-header>
+      {{pollName}}
+    </ion-card-header>
+    <ion-card-content>
+      {{description}}
+    </ion-card-content>
+
+    <ion-list>
+      <ion-item>
+        <ion-label>Vote Options</ion-label>
+        <ion-select [(ngModel)]="vote" multiple="false" okText="Submit Vote">
+          <ion-option *ngFor="let option of options">{{option}}</ion-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+
+
   </ion-card>
 </ion-content>

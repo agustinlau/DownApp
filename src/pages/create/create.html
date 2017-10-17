@@ -20,7 +20,7 @@
     </ion-item>
 
     <ion-item>
-      <ion-label stacked>Poll Question</ion-label>
+      <ion-label stacked>Description</ion-label>
       <ion-input type="text" placeholder="Snacks and popcorn included!" [(ngModel)]="description"></ion-input>
     </ion-item>
 
@@ -36,9 +36,11 @@
 
   </ion-list>
 
-  <button ion-button (click)="addOption()">
-    Add Option
-  </button>
+  <div text-center>
+    <button ion-button outline (click)="addOption()">
+      Add Option
+    </button>
+  </div>
 
   <button ion-button full (click)="createPoll(pollName, description, options)">
     Next
