@@ -20,12 +20,16 @@
     <ion-list>
       <ion-item>
         <ion-label>Vote Options</ion-label>
-        <ion-select [(ngModel)]="vote" multiple="false" okText="Submit Vote">
+        <ion-select [(ngModel)]="vote" multiple="false">
           <ion-option *ngFor="let option of options">{{option}}</ion-option>
         </ion-select>
       </ion-item>
     </ion-list>
 
-
   </ion-card>
+
+  <div text-center>
+    <button ion-button outline>Submit Vote</button>
+  </div>
+
 </ion-content>

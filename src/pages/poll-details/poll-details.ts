@@ -17,7 +17,4 @@ export class PollDetailsPage {
     this.options = navParams.get("options");
   }
 
-  // console.log(vote);
-
-
 }
